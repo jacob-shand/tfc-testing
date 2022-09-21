@@ -19,6 +19,11 @@ resource "fakewebservices_vpc" "primary_vpc" {
   cidr_block = "0.0.0.0/1"
 }
 
+resource "fakewebservices_vpc" "secondary_vpc" {
+  name       = var.VPCName
+  cidr_block = "0.0.0.0/1"
+}
+
 resource "fakewebservices_server" "servers" {
   count = 2
 
